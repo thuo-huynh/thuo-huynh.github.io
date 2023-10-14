@@ -53,7 +53,7 @@ Let’s look at the sequence.
 The above explanation is about the signals that are sent and received. In fact, there are more parts to be concerned about when implementing the code.
 
 T.B.D
-![Signaling](/assets/img/webrtc/implement/progress.png)
+<!-- ![Signaling](/assets/img/webrtc/implement/progress.png) -->
 
 # 3. Code
 ## 3.1. Signaling Server(Node.js)
