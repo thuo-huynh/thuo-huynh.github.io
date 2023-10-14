@@ -1,5 +1,5 @@
 ---
-title: Implementing WebRTC using ReactJS and Typescript
+title: Implementing WebRTC using ReactJS and typescript
 author: thuohuynh
 date: 2023-10-09 14:10:00 +0900
 categories: [WebRTC, Implement]
@@ -61,7 +61,7 @@ T.B.D
 You must use socket.io version=2.3.0.
 {: .prompt-info }
 
-```Typescript
+```typescript
 let users = {};
 let socketToRoom = {};
 const maximum = 2;
@@ -123,11 +123,12 @@ In summary, this code manages user connections to rooms, keeps track of users in
 
 ## 3.2. Client(ReactJS, Typescript)
 > Note
-You must use socket.io-client version=2.3.0, @types/socket.io-client version=1.4.34. {: .prompt-info }
+You must use socket.io-client version=2.3.0, @types/socket.io-client version=1.4.34. 
+{: .prompt-info }
 
 ### Variables to use in the client
 
-```Typescript
+```typescript
 const [pc, setPc] = useState<RTCPeerConnection>();
 const [socket, setSocket] = useState<SocketIOClient.Socket>();
 
@@ -150,7 +151,7 @@ const pc_config = {
 
 ### Socket event
 
-```Typescript
+```typescript
 let newSocket = io.connect("http://localhost:8080");
 let newPC = new RTCPeerConnection(pc_config);
 
@@ -183,7 +184,7 @@ setPc(newPC);
 
 ### MediaStream setup and RTCPeerConnection event
 
-```Typescript
+```typescript
 navigator.mediaDevices
     .getUserMedia({
         video: true,
@@ -223,7 +224,7 @@ navigator.mediaDevices
 
 ### Send offer signal to other peer
 
-```Typescript
+```typescript
 const createOffer = () => {
     console.log("create offer");
     newPC
@@ -240,7 +241,7 @@ const createOffer = () => {
 
 ### Send answer signal to other peer
 
-```Typescript
+```typescript
 const createAnswer = (sdp: RTCSessionDescription) => {
     newPC.setRemoteDescription(new RTCSessionDescription(sdp)).then(() => {
         console.log("answer set remote description success");
@@ -263,7 +264,7 @@ const createAnswer = (sdp: RTCSessionDescription) => {
 
 ### Video rendering of yourself and the other user’s
 
-```Typescript
+```typescript
 return (
     <div>
         <video
