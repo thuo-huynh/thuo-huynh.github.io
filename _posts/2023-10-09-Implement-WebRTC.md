@@ -1,5 +1,5 @@
 ---
-title: Implementing WebRTC using ReactJS and typescript
+title: Implementing WebRTC using ReactJS and Typescript
 author: thuohuynh
 date: 2023-10-09 14:10:00 +0900
 categories: [WebRTC, Implement]
@@ -44,16 +44,18 @@ The Fig. 5 below is not clearly depicted in the above pictures, so the data exch
 ### Let’s look at the sequence.
 Let’s look at the sequence.
 1. First, each peer receives its own Public Address and whether it is accessible to the STUN server.
-2. Peer1 first creates its SessionDescription through createOffer and delivers it to Peer2 through Signaling Server. (In this picture, Peer1 is the Caller role in the picture above)
-3. Peer2 receives Peer1’s SessionDescription, creates its own SessionDescription through createAnswer in response to this, and delivers it to Peer1 through Signaling Server.
-4. After both Peer1 and Peer2 create their own SessionDescription, they start to create their own ICECandidate information, and each transmits it to each other.
-5. Each other’s MediaStream is exchanged through peer-to-peer communication.
-6. If there is a Peer with Symmetric NAT among Peer1 and Peer2, you must use the TURN server to connect to the data relay.
+2. Peer1 first creates its SessionDescription through createOffer 
+3. Delivers Peer1's SDP to Peer2 through Signaling Server. (In this picture, Peer1 is the Caller role in the picture above)
+4. Peer2 receives Peer1’s SessionDescription, creates its own SessionDescription through createAnswer in response to this
+5. Delivers Peer2's SDP to Peer1 through Signaling Server.
+6. After both Peer1 and Peer2 create their own SessionDescription, they start to create their own ICECandidate information, and each transmits it to each other.
+7. Each other’s MediaStream is exchanged through peer-to-peer communication.
+8. If there is a Peer with Symmetric NAT among Peer1 and Peer2, you must use the TURN server to connect to the data relay.
 
 The above explanation is about the signals that are sent and received. In fact, there are more parts to be concerned about when implementing the code.
 
-T.B.D
-<!-- ![Signaling](/assets/img/webrtc/implement/progress.png) -->
+
+![Signaling](/assets/img/webrtc/implement/signaling-process.png)
 
 # 3. Code
 ## 3.1. Signaling Server(Node.js)
@@ -294,7 +296,7 @@ return (
 ```
 
 # [GitHub]
-T.B.D
+- <https://github.com/thuo-huynh/react-ts-webrtc-p2p>
 
 # [References]
 - <https://www.html5rocks.com/en/tutorials/webrtc/basics/>
