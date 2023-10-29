@@ -1,11 +1,11 @@
+---
 Title: Camera Emulator with FFmpeg Using Docker
 Author: thuohuynh
 Date: 2023-10-11 16:10:00 +0900
 Categories: [Docker, Camera]
 Tags: [docker]
 Render with Liquid: false
-
-# Camera Emulator with FFmpeg Using Docker
+---
 
 In the realm of multimedia, there's often a need to create and manipulate video streams. Whether it's for testing, development, or other purposes, there are situations where simulating a fake camera source becomes essential. This is where FFmpeg, a robust multimedia framework, shines. In this article, we'll delve into the process of generating a fake camera source using FFmpeg and packaging it into a Docker container for easy deployment.
 
