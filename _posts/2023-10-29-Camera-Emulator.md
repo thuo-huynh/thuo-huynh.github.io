@@ -43,14 +43,22 @@ services:
       - 8554:8554
     tty: true
     volumes:
-      - ./emulator/rtsp-simple-server.yml:/rtsp-simple-server.yml
-      - ./emulator/videos:/var/videos
+      - ./rtsp-simple-server.yml:/rtsp-simple-server.yml
+      - ./videos:/var/videos
     command: bash -c "/mediamtx & ffmpeg \
           -re -stream_loop -1 -i /var/videos/follower.mp4 \
           -map 0:v -c:v copy -f rtsp -rtsp_transport tcp rtsp://localhost:8554/camera"
 ```
  
 ## 4. Explanation
+
+I will explain the command that is running in the camera emulator container.
+
+```bash
+/mediamtx & 
+ffmpeg -re -stream_loop -1 -i /var/videos/follower.mp4 \
+-map 0:v -c:v copy -f rtsp -rtsp_transport tcp rtsp://localhost:8554/camera
+```
 
 1. The container run command initiates the "mediamtx" application as a background process:
 
