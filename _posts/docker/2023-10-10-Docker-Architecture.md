@@ -28,7 +28,7 @@ Docker Engine quản lý 4 đối tượng chính, mỗi đối tượng có tê
 - **Network:** Cung cấp private network (VLAN) cho việc liên lạc giữa các container trên một host hoặc giữa các container trên nhiều hosts (multi-host networking).
 - **Volume:** Sử dụng để lưu trữ dữ liệu độc lập với vòng đời của container, giúp chia sẻ dữ liệu giữa các containers và với host.
 
-![Mối quan hệ của Docker Image, Container, Network, Volume](link_to_image)
+![Mối quan hệ của Docker Image, Container, Network, Volume]()
 
 ## Một số câu lệnh cơ bản của Docker
 
