@@ -1,5 +1,5 @@
 ---
-title: Introduction IoC, DIP, DI and IoC Container in NestJS
+title: "[NestJS] Introduction IoC, DIP, DI and IoC Container in NestJS"
 author: thuohuynh
 date: 2024-03-04 00:00:00 +0900
 categories: [NestJs]

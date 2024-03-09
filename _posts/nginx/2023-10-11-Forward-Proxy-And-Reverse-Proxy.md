@@ -1,5 +1,5 @@
 ---
-title: Forward Proxy and Reverse Proxy
+title: "[Nginx] Forward Proxy and Reverse Proxy"
 author: thuohuynh
 date: 2023-10-11 16:10:00 +0900
 categories: [WebServer, Nginx]

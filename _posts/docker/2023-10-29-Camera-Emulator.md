@@ -1,5 +1,5 @@
 ---
-title: Camera Emulator with FFmpeg Using Docker
+title: "[Docker] Camera Emulator with FFmpeg Using Docker"
 author: thuohuynh
 date: 2023-10-11 16:10:00 +0900
 categories: [Docker, Camera]

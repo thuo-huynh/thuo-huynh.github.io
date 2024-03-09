@@ -1,5 +1,5 @@
 ---
-title: Implementing WebRTC using ReactJS and Typescript
+title: "[WebRTC] Implementing WebRTC using ReactJS and Typescript"
 author: thuohuynh
 date: 2023-10-09 14:10:00 +0900
 categories: [WebRTC, Implement]
