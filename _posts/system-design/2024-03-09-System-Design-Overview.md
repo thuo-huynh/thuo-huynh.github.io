@@ -19,11 +19,11 @@ Với tinh thần học hỏi và mục đích chia sẻ, mong rằng anh namvu 
 4. [Phần 4: Phân chia dữ liệu — Sharding/Data Partitioning](/posts/System-Design-Chapter-4)
 5. [Phần 5: Indexes](/posts/System-Design-Chapter-5)
 6. [Phần 6: Proxies](/posts/System-Design-Chapter-6)
-7. [Phần 7: Sao lưu và đồng bộ dữ liệu — Redundancy and Replication](#/posts/System-Design-Chapter-7)
-8. [Phần 8: SQL vs. NoSQL](#/posts/System-Design-Chapter-8)
-9. [Phần 9: Định lý CAP / CAP Theorem](#/posts/System-Design-Chapter-9)
-10. [Phần 10: Consistent Hashing](#/posts/System-Design-Chapter-10)
-11. [Phần 11: Long-Polling vs WebSockets vs Server-Sent Events](#/posts/System-Design-Chapter-11)
+7. [Phần 7: Sao lưu và đồng bộ dữ liệu — Redundancy and Replication](/posts/System-Design-Chapter-7)
+8. [Phần 8: SQL vs. NoSQL](/posts/System-Design-Chapter-8)
+9. [Phần 9: Định lý CAP / CAP Theorem](/posts/System-Design-Chapter-9)
+10. [Phần 10: Consistent Hashing](/posts/System-Design-Chapter-10)
+11. [Phần 11: Long-Polling vs WebSockets vs Server-Sent Events](/posts/System-Design-Chapter-11)
 
 # [Reference]
 - <https://batnamv.medium.com/>
