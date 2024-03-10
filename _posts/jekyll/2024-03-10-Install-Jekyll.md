@@ -30,7 +30,7 @@ Hôm nay mình sẽ hướng dẫn các bạn tạo một blog tĩnh bằng Jeky
 
 ## 2. Cài đặt Ruby + Devkit
 
-- #### [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)
+- #### [https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)
 - #### Download Ruby phù hợp với môi trường PC của mình
 
   ![No Image](/assets/img/jekylls/ruby_down.png)
