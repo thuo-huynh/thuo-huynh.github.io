@@ -1,5 +1,5 @@
 ---
-title: "[Nginx] Basic concept."
+title: "[Nginx] Phần 2: Kiến thức cơ bản"
 author: thuohuynh
 date: 2023-10-11 16:10:00 +0900
 categories: [WebServer, Nginx]

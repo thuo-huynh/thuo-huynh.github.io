@@ -26,7 +26,7 @@ Cân bằng tải (load balancing — LB) là một thành phần quan trọng t
 
 LB thường thực hiện kiểm tra sức khỏe (health checks) định kỳ của các máy chủ trong hệ thống. Nếu máy chủ có trạng thái khỏe mạnh, LB sẽ chuyển tiếp các request đến máy chủ đó. Ngược lại, nếu máy chủ không khả dụng hoặc không phản hồi (not healthy), LB sẽ loại bỏ máy chủ đó khỏi danh sách và chờ đến khi máy chủ trở lại trạng thái khỏe.
 
-![Mô hình mô tả một hệ thống distributed system được horizontal scaling và sử dụng LB để cân bằng tải.](/assets/img/system-design/load-balance-01.webp)
+![Mô hình mô tả một hệ thống distributed system được horizontal scaling và sử dụng LB để cân bằng tải.](/assets/img/system-design/02/load-balance-01.webp)
 
 ## Thuật toán Load Balancing
 
@@ -38,7 +38,7 @@ Tuy nhiên, trên thực tế, không có thuật toán LB nào hoàn hảo. M�
 
 Để đạt được tính high availability, có thể áp dụng LB ở nhiều lớp trong hệ thống, như LB cho nhiều DB, LB cho Web-Server, hoặc LB cho Application Server. Mô hình này giúp tránh được điểm lỗi duy nhất (Single point of failure) và cải thiện đáng kể khả năng đáp ứng và sẵn sàng của ứng dụng, đặc biệt khi áp dụng horizontal scaling.
 
-![Mô hình Load Balancing nhiều tầng](/assets/img/system-design/load-balance-03.png)
+![Mô hình Load Balancing nhiều tầng](/assets/img/system-design/02/load-balance-03.png)
 
 ## Lợi ích của Load Balancing
 
@@ -50,4 +50,4 @@ Tuy nhiên, trên thực tế, không có thuật toán LB nào hoàn hảo. M�
 
 Tuy nhiên, LB có thể trở thành điểm lỗi duy nhất nếu quá tải hoặc gặp lỗi phần cứng/phần mềm, dẫn đến sự cố của cả hệ thống. Để khắc phục, nên sử dụng ít nhất 2 LB kết hợp với nhau dưới dạng active-standby để đảm bảo tính sẵn sàng và ổn định của hệ thống.
 
-![Mô hình cụm LB backup cho nhau](/assets/img/system-design/load-balance-02.gif)
+![Mô hình cụm LB backup cho nhau](/assets/img/system-design/02/load-balance-02.gif)
