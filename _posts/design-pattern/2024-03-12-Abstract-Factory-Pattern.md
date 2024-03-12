@@ -15,6 +15,7 @@ render_with_liquid: false
 # Phần 2: Abstract Factory
 
 **Abstract Factory** cho phép ta có thể tạo một tập các objects liên quan đến nhau mà không cần phải thông qua các classes cụ thể nào.
+
 ![](https://refactoring.guru/images/patterns/content/abstract-factory/abstract-factory-en.png)
 
 ### Vấn đề
