@@ -12,3 +12,4 @@ Xin chào mọi người, trong quá trình để trở thành Software Engineer
 ## Mục lục
 
 1. [Phần 1: Factory Method](/posts/Factory-Method-Pattern)
+2. [Phần 2: Abstract Factory](/posts/Abstract-Factory-Pattern)

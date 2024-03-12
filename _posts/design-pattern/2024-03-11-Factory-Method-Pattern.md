@@ -10,6 +10,7 @@ render_with_liquid: false
 ## Mục lục
 
 1. [Phần 1: Factory Method](/posts/Factory-Method-Pattern)
+2. [Phần 2: Abstract Factory](/posts/Abstract-Factory-Pattern)
 
 # Phần 1: Factory Method
 
