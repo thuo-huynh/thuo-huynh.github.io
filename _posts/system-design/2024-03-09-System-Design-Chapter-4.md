@@ -1,7 +1,7 @@
 ---
 title: "[System Design] Phân chia dữ liệu — Sharding/Data Partitioning"
 author: thuohuynh
-date: 2024-03-08 00:00:00 +0900
+date: 2024-03-12 00:00:00 +0900
 categories: [SystemDesign]
 tags: [systemdesign]
 render_with_liquid: false
