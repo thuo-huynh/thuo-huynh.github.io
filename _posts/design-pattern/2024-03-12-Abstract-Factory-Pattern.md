@@ -2,7 +2,7 @@
 title: "[Design Pattern] Abstract Factory"
 author: thuohuynh
 date: 2024-03-12 13:00:00 +0900
-categories: [Design Pattern, Abstract Factory]
+categories: [Design Pattern, Creational Pattern, Abstract Factory]
 tags: [designpattern]
 render_with_liquid: false
 ---
@@ -11,6 +11,7 @@ render_with_liquid: false
 
 1. [Phần 1: Factory Method](/posts/Factory-Method-Pattern)
 2. [Phần 2: Abstract Factory](/posts/Abstract-Factory-Pattern)
+3. [Phần 3: Builder](/posts/Builder-Pattern)
 
 # Phần 2: Abstract Factory
 
