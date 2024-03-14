@@ -2,7 +2,7 @@
 title: "[Design Pattern] Mở đầu"
 author: thuohuynh
 date: 2024-03-11 16:10:00 +0900
-categories: [Design Pattern, Factory]
+categories: [Design Pattern, Overview]
 tags: [designpattern]
 render_with_liquid: false
 ---

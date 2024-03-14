@@ -2,17 +2,17 @@
 title: "[Design Pattern] Factory Method Pattern"
 author: thuohuynh
 date: 2024-03-11 16:10:00 +0900
-categories: [Design Pattern, Creational Pattern, Factory]
+categories: [Design Pattern, Creational Pattern]
 tags: [designpattern]
 render_with_liquid: false
 ---
 
 ## Mục lục
 
-1. [Phần 1: Factory Method Pattern](/posts/Factory-Method-Pattern)
-2. [Phần 2: Abstract Factory Pattern](/posts/Abstract-Factory-Pattern)
-3. [Phần 3: Builder Pattern](/posts/Builder-Pattern)
-4. [Phần 4: Prototype Pattern](/posts/Prototype-Pattern)
+1. [Phần 1: Factory Method](/posts/Factory-Method-Pattern)
+2. [Phần 2: Abstract Factory](/posts/Abstract-Factory-Pattern)
+3. [Phần 3: Builder](/posts/Builder-Pattern)
+4. [Phần 4: Prototype](/posts/Prototype-Pattern)
 
 # Phần 1: Factory Method
 
