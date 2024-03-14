@@ -1,5 +1,5 @@
 ---
-title: "[Design Pattern] Abstract Factory"
+title: "[Design Pattern] Abstract Factory Pattern"
 author: thuohuynh
 date: 2024-03-12 13:00:00 +0900
 categories: [Design Pattern, Creational Pattern, Abstract Factory]
@@ -12,6 +12,7 @@ render_with_liquid: false
 1. [Phần 1: Factory Method](/posts/Factory-Method-Pattern)
 2. [Phần 2: Abstract Factory](/posts/Abstract-Factory-Pattern)
 3. [Phần 3: Builder](/posts/Builder-Pattern)
+4. [Phần 4: Prototype Pattern](/posts/Prototype-Pattern)
 
 # Phần 2: Abstract Factory
 
@@ -152,4 +153,4 @@ clientCode(new ConcreteFactory2());
 
 # [References]
 
-https://refactoring.guru/design-patterns/abstract-factory
+<https://refactoring.guru/design-patterns/abstract-factory>

@@ -11,6 +11,7 @@ Xin chào mọi người, trong quá trình để trở thành Software Engineer
 
 ## Mục lục
 
-1. [Phần 1: Factory Method](/posts/Factory-Method-Pattern)
-2. [Phần 2: Abstract Factory](/posts/Abstract-Factory-Pattern)
-3. [Phần 3: Builder](/posts/Builder-Pattern)
+1. [Phần 1: Factory Method Pattern](/posts/Factory-Method-Pattern)
+2. [Phần 2: Abstract Factory Pattern](/posts/Abstract-Factory-Pattern)
+3. [Phần 3: Builder Pattern](/posts/Builder-Pattern)
+4. [Phần 4: Prototype Pattern](/posts/Prototype-Pattern)
