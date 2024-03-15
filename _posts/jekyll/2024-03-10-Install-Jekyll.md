@@ -5,7 +5,7 @@ categories: [Jekyll]
 excerpt: " "
 comments: true
 share: true
-tags: [Jekyll, Window]
+tags: [jekyll, window]
 date: 2024-03-10
 ---
 
