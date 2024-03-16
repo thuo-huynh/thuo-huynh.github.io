@@ -414,7 +414,7 @@ Ngoài ra việc giao tiếp với các hệ thống bên ngoài cũng do reposi
 
 Gom tất cả các thành phần đã kể trên lại, chúng ta có thể phác hoạ ra mô hình tổng quan của một ứng dụng sử dụng NestJS như sau:
 
-![Screen Shot 2023-10-09 at 12 42 09](https://miro.medium.com/v2/resize:fit:1100/format:webp/0*vMpQLZG-8DJzxx1J)
+![](/assets/img/nestjs/life-cycle.png)
 
 Hi vọng bài viết sẽ đem lại cho bạn đọc một cái nhìn tổng quan nhất về một ứng dụng NestJS.
 
