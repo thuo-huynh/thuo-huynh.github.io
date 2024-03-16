@@ -13,6 +13,7 @@ render_with_liquid: false
 2. [Phần 2: Abstract Factory](/posts/Abstract-Factory-Pattern)
 3. [Phần 3: Builder](/posts/Builder-Pattern)
 4. [Phần 4: Prototype](/posts/Prototype-Pattern)
+5. [Phần 5: Singleton](/posts/Singleton-Pattern)
 
 # Phần 4: Prototype Pattern
 

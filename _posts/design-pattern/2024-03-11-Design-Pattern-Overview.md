@@ -15,3 +15,4 @@ Xin chào mọi người, trong quá trình để trở thành Software Engineer
 2. [Phần 2: Abstract Factory Pattern](/posts/Abstract-Factory-Pattern)
 3. [Phần 3: Builder Pattern](/posts/Builder-Pattern)
 4. [Phần 4: Prototype Pattern](/posts/Prototype-Pattern)
+5. [Phần 5: Singleton](/posts/Singleton-Pattern)
