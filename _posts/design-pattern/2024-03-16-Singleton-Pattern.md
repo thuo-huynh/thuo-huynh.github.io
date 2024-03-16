@@ -22,19 +22,18 @@ Singleton Pattern cho phép bạn có thể chắc chắn rằng class chỉ có
 ![](https://refactoring.guru/images/patterns/content/singleton/singleton.png)
 
 ## Vấn đề
-1. **Đảm bảo class chỉ có duy nhất một instance**: Tại sao ta cần phải kiểm soát số lượng các instance của một class. Câu trả lời đó là khi instance của class là tài nguyên dùng chung (DB hoặc file)
 
-Đây là cách nó hoạt động: hãy tưởng tượng bạn vừa tạo một object nhưng sau đó, khi bạn quyết định tạo thêm một object khác nữa, thay vì nhận về một object mới tinh bạn chỉ nhận về được object mà bạn đã có trước đó.
-
-Chú ý rằng điều này là không thể với các `constructor` thông thường vì các `constructor` thông thường **sẽ luôn** trả về một **object mới tinh** cho chúng ta
+1. **Đảm bảo class chỉ có duy nhất một instance**: 
+- Tại sao ta cần phải kiểm soát số lượng các instance của một class. Câu trả lời đó là khi instance của class là tài nguyên dùng chung (DB hoặc file). 
+- Đây là cách nó hoạt động: hãy tưởng tượng bạn vừa tạo một object nhưng sau đó, khi bạn quyết định tạo thêm một object khác nữa, thay vì nhận về một object mới tinh bạn chỉ nhận về được object mà bạn đã có trước đó. 
+- Chú ý rằng điều này là không thể với các `constructor` thông thường vì các `constructor` thông thường **sẽ luôn** trả về một **object mới tinh** cho chúng ta
 
 ![](https://refactoring.guru/images/patterns/content/singleton/singleton-comic-1-en.png)
 
-2. **Cho phép global access tới instance**: Các biến global rất tiện lợi, tuy nhiên nó cũng tiềm ẩn những nguy cơ nhất định như việc bất kì đoạn code nào có thể truy cập tới nó, thay đổi giá trị của nó từ đó dẫn tới khả năng crash app.
-
-Cũng tương tự như các biến toàn cục, Singleton pattern cho phép chúng ta có thể truy cập đến các objects ở bất cứ đâu trong chương trình. Tuy nhiên nó cũng bảo vệ các objects đó khỏi việc bị ghi đè bởi các đoạn code khác.
-
-Có một vấn đề khác mà chúng ta cần quan tâm ở đây đó là việc chúng ta không hề muốn các đoạn code giải quyết vấn đề thứ nhất (**Đảm bảo class chỉ có duy nhất một instance**) nằm rải rác ở nhiều nơi trong chương trình của chúng ta, tốt hơn hết là giữ nó ở trong một class duy nhất (nhất là khi code của bạn phụ thuộc nhiều vào nó)
+2. **Cho phép global access tới instance**: 
+- Các biến global rất tiện lợi, tuy nhiên nó cũng tiềm ẩn những nguy cơ nhất định như việc bất kì đoạn code nào có thể truy cập tới nó, thay đổi giá trị của nó từ đó dẫn tới khả năng crash app. 
+- Cũng tương tự như các biến toàn cục, Singleton pattern cho phép chúng ta có thể truy cập đến các objects ở bất cứ đâu trong chương trình. Tuy nhiên nó cũng bảo vệ các objects đó khỏi việc bị ghi đè bởi các đoạn code khác. 
+- Có một vấn đề khác mà chúng ta cần quan tâm ở đây đó là việc chúng ta không hề muốn các đoạn code giải quyết vấn đề thứ nhất (**Đảm bảo class chỉ có duy nhất một instance**) nằm rải rác ở nhiều nơi trong chương trình của chúng ta, tốt hơn hết là giữ nó ở trong một class duy nhất (nhất là khi code của bạn phụ thuộc nhiều vào nó)
 
 ## Giải pháp
 Có 2 bước
