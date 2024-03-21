@@ -15,6 +15,7 @@ render_with_liquid: false
 4. [Phần 4: Prototype](/posts/Prototype-Pattern)
 5. [Phần 5: Singleton](/posts/Singleton-Pattern)
 6. [Phần 6: Adapter](/posts/Adapter-Pattern)
+7. [Phần 7: Bridge](/posts/Bridge-Pattern)
 
 # Phần 6: Adapter Pattern
 

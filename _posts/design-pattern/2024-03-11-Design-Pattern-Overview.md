@@ -17,3 +17,4 @@ Xin chào mọi người, trong quá trình để trở thành Software Engineer
 4. [Phần 4: Prototype Pattern](/posts/Prototype-Pattern)
 5. [Phần 5: Singleton](/posts/Singleton-Pattern)
 6. [Phần 6: Adapter](/posts/Adapter-Pattern)
+7. [Phần 7: Bridge](/posts/Bridge-Pattern)
