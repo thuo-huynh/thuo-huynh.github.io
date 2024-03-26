@@ -12,7 +12,7 @@ render_with_liquid: false
 1. [Phần 1: Clean Architecture](/posts/Clean-Architecture)
 2. [Phần 2: Implement Clean Architecture](/posts/Implement-Clean-Architecture)
 
-# Phần 2: Implement Clean Architecture
+<!-- # Phần 2: Implement Clean Architecture
 
 Trong bài viết này mình sẽ cung cấp một ví dụ cụ thể cho việc vận dụng nguyên tắc và tư duy Clean Architecture cho một service REST API viết bằng ExpressJS và Typescript.
 
@@ -36,7 +36,7 @@ Hệ quả là:
 
 ## Ứng dụng các nguyên lý của Clean Architecture vào service Express
 
-### Thiết kế các tầng phù hợp
+### Thiết kế các tầng phù hợp -->
 
 # [References]
 

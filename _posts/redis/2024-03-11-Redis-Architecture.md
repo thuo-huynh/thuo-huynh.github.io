@@ -1,4 +1,4 @@
-# Redis Architecture
+<!-- # Redis Architecture
 
 ## Redis là gì ?
 
@@ -158,4 +158,4 @@ Giống như trong OS, Redis sẽ tạo ra một tiến trình con (fork) có ID
 
 Bản thân Redis cũng sử dụng rất nhiều bộ nhớ nhưng cơ chế forking của nó cho phép tiến trình con và cha `dùng chung bộ nhớ` nên sẽ tránh được tình trạng **out of memory**, tiến trình con này sẽ sử dụng bộ nhớ dùng chung để tiến hành `snapshotting` - kĩ thuật sử dụng bộ nhớ dùng chung để snapshotting này được gọi là `copy-on-write`.
 
-Nếu không có gì thay đổi thì không cần cấp phát thêm bộ nhớ mới. Ngược lại sẽ có bộ nhớ mới cấp phát, tiến trình con hoàn toàn không biết gì về việc này cả, qua đó giúp cho việc snapshot cả gigabyte dữ liệu diễn ra nhanh chóng.
+Nếu không có gì thay đổi thì không cần cấp phát thêm bộ nhớ mới. Ngược lại sẽ có bộ nhớ mới cấp phát, tiến trình con hoàn toàn không biết gì về việc này cả, qua đó giúp cho việc snapshot cả gigabyte dữ liệu diễn ra nhanh chóng. -->

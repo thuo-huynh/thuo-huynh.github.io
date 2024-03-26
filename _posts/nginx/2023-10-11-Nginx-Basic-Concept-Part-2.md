@@ -7,7 +7,7 @@ tags: [nginx]
 render_with_liquid: false
 ---
 
-## Cân bằng tải
+<!-- ## Cân bằng tải
 
 Nginx có thể được sử dụng như một load balancer với hai nhiệm vụ như sau:
 
@@ -103,4 +103,4 @@ Và đây là kết quả chúng ta nhận được
 
 ![Screen Shot 2022-09-23 at 16 21 25](https://user-images.githubusercontent.com/15076665/191910278-62a2fe09-8940-49d1-9d0e-c660d375e2d0.png)
 
-Các requests lần lượt được luân chuyển đến các server theo thứ tự 1, 2, 3
+Các requests lần lượt được luân chuyển đến các server theo thứ tự 1, 2, 3 -->
