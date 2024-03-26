@@ -71,7 +71,7 @@ class ValidatePerson {
 }
 ```
 
-Hàm tạo hoá đơn display đảm nhiệm chức năng hiển thị thông tin user - chức năng hoàn toàn khác với ValidatePersion nên cần tách nó ra thành một Class mới, như sau:
+Hàm display đảm nhiệm chức năng hiển thị thông tin user - chức năng hoàn toàn khác với ValidatePersion nên cần tách nó ra thành một Class mới, như sau:
 
 ```ts
 class DisplayPerson {
