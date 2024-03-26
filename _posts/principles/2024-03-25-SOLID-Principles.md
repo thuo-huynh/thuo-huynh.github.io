@@ -12,8 +12,7 @@ render_with_liquid: false
 Nếu các bạn đã quen thuộc với Lập trình hướng đối tượng (OOP), thì có thể bạn đã từng nghe về các nguyên tắc SOLID.
 
 Hiện nay ở trên mang có rất nhiều vài viết hay về SOLID nhưng mình hiếm khi thấy bất kỳ ví dụ nào có hình ảnh. Điều này khiến việc học hỏi đối với những người học tập bằng hình ảnh như mình cảm thấy hơi khó khăn.
-Vì vậy, mục đích chính của bài viết này là giúp bạn hiểu rõ hơn về các nguyên tắc này bằng cách sử dụng hình ảnh minh họa và nhấn mạnh mục tiêu của từng nguyên tắc.
-Bạn thấy đấy, một số nguyên tắc này có vẻ tương đồng nhưng chúng không hướng đến cùng một mục tiêu. Có thể tuân theo một nguyên tắc trong khi vi phạm nguyên tắc khác, mặc dù chúng giống nhau.
+Vì vậy, mục đích chính của bài viết này là giúp bạn hiểu rõ hơn về các nguyên tắc này bằng cách sử dụng hình ảnh minh họa và nhấn mạnh mục tiêu của từng nguyên tắc. 
 
 Năm nguyên tắc phát triển phần mềm này là những hướng dẫn cần tuân theo khi xây dựng phần mềm để nó dễ dàng mở rộng và bảo trì hơn. Chúng được phổ biến bởi Robert C. Martin, một kỹ sư phần mềm, còn được biết tới với biệt danh "Uncle Bob", đã cho ra đời cuốn sách "Design Principles and Design Patterns". Trong cuốn sách này ông nhấn mạnh việc lập trình hướng đối tượng phải đáp ứng được khả năng bảo trì và mở rộng bằng cách đề xuất ra 5 nguyên tắc cơ bản gọi là SOLID - viết tắt của của 5 chữ cái đầu của mỗi nguyên tắc:
 
