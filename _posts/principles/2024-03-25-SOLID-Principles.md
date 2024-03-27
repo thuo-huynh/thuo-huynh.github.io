@@ -32,8 +32,13 @@ Năm nguyên tắc phát triển phần mềm này là những hướng dẫn c�
 
 Nếu một class có nhiều chức năng, điều này tăng khả năng phát sinh lỗi vì việc thay đổi một trong các chức năng của nó có thể ảnh hưởng đến các chức năng khác mà chúng ta không hề hay biết. 
 
-**Kết luận:**
 Nguyên tắc này nhằm tách biệt các class để nếu có lỗi phát sinh do sự thay đổi của bạn, nó sẽ không ảnh hưởng đến các class không liên quan khác.
+
+### Diagram
+
+![Diagram](/assets/img/principles/solid/SD.png)
+
+### Code example:
 
 ```ts
 class ValidatePerson {
@@ -75,22 +80,18 @@ Hàm display đảm nhiệm chức năng hiển thị thông tin user - chức n
 
 ```ts
 class DisplayPerson {
-    private name: string;
-    private age: number;
     private validate: ValidatePerson;
 
     constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
         this.validate = new ValidatePerson(this.name, this.age);
     }
 
-    Display(): void {
+    display(): void {
         if (
-            this.validate.validateName(this.name) &&
-            this.validate.validateAge(this.age)
+            this.validate.validateName(this.validate.name) &&
+            this.validate.validateAge(this.validate.age)
         ) {
-            console.log(`Name: ${this.name} and Age: ${this.age}`);
+            console.log(`Name: ${this.validate.name} and Age: ${this.validate.age}`);
         } else {
             console.log('Invalid');
         }
@@ -111,9 +112,13 @@ Lưu ý rằng, việc tách một Class có nhiều nhiệm vụ thành nhiều
 Thay đổi hành vi hiện tại của một class sẽ ảnh hưởng đến tất cả các hệ thống sử dụng class đó.
 Nếu bạn muốn class thực hiện nhiều chức năng hơn, cách tiếp cận lý tưởng là thêm vào các chức năng đã tồn tại KHÔNG phải là thay đổi chúng.
 
-**Kết luận:**
-
 Nguyên tắc này nhằm mở rộng hành vi của một class mà không thay đổi hành vi hiện tại của class đó. Điều này nhằm tránh gây ra lỗi trong bất kỳ nơi nào class đó được sử dụng.
+
+### Diagram:
+
+![Diagram](/assets/img/principles/solid/OD.png)
+
+### Source code:
 
 ```ts
 interface Shape {
@@ -153,15 +158,269 @@ Nếu cần thiết chúng ta có thể tiếp tục mở rộng thêm cách tí
 
 ![Liskov Substitution Principle](/assets/img/principles/solid/L.png)
 
+>Notes: Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.
+
+Khi một `child class` không thể thực hiện các hành động tương tự như `parent class`, điều này có thể gây ra các lỗi.
+
+Nếu bạn có một Class và tạo ra một Class khác từ nó, nó trở thành một parent và Class mới trở thành một child. Child Class nên có khả năng thực hiện mọi thứ mà parent Class có thể làm. Quá trình này được gọi là Inheritance (Kế thừa). Child Class nên có khả năng xử lý các yêu cầu tương tự và cung cấp kết quả tương tự như parent Class hoặc có thể cung cấp một kết quả thuộc cùng một loại.
+
+Hình minh họa cho thấy `parent class` là Sportsman (có thể là bất kỳ loại sport nào). Việc `child class` chấp nhận được vì Powerlifter đó là một loại sport cụ thể và vẫn giữ bản nguyên bản chất của `parent class`.
+
+Nếu `child class` không đáp ứng các yêu cầu này, điều đó có nghĩa là `child class` đã thay đổi hoàn toàn và vi phạm nguyên tắc này. Nguyên tắc này nhằm áp đặt tính nhất quán để `parent class` hoặc `child class` của nó có thể được sử dụng mà không gặp bất kỳ lỗi nào.
+
+### Diagram:
+
+![Diagram](/assets/img/principles/solid/LD.png)
+
+### Code examples:
+
+```ts
+class Rectangle {
+    protected width: number;
+    protected height: number;
+
+    constructor(width: number, height: number) {
+        this.width = width;
+        this.height = height;
+    }
+
+    getWidth(): number {
+        return this.width;
+    }
+
+    getHeight(): number {
+        return this.height;
+    }
+
+    setWidth(width: number): void {
+        this.width = width;
+    }
+
+    setHeight(height: number): void {
+        this.height = height;
+    }
+
+    getArea(): number {
+        return this.width * this.height;
+    }
+}
+
+class Square extends Rectangle {
+    constructor(side: number) {
+        super(side, side);
+    }
+
+    setWidth(width: number): void {
+        super.setWidth(width);
+        super.setHeight(width);
+    }
+
+    setHeight(height: number): void {
+        super.setWidth(height);
+        super.setHeight(height);
+    }
+}
+
+function printArea(rectangle: Rectangle): void {
+    console.log(`Area: ${rectangle.getArea()}`);
+}
+```
+Trong ví dụ này, lớp `Square` thừa kế từ `Rectangle`, nhưng khi nó triển khai các phương thức `setWidth` và `setHeight`, nó vi phạm nguyên tắc LSP bằng cách làm thay đổi chiều rộng và chiều cao cùng một lúc.
+
+Trong trường hợp này, để chương trình không vi phạm nguyên tắc LSP, ta phải tạo một `parent class` là `class Shape`, sau đó cho `Square` và `Rectangle` kế thừa `class Shape` này.
+
+```ts
+class Shape {
+    protected width: number;
+    protected height: number;
+
+    constructor(width: number, height: number) {
+        this.width = width;
+        this.height = height;
+    }
+
+    getWidth(): number {
+        return this.width;
+    }
+
+    getHeight(): number {
+        return this.height;
+    }
+
+    setWidth(width: number): void {
+        this.width = width;
+    }
+
+    setHeight(height: number): void {
+        this.height = height;
+    }
+
+    getArea(): number {
+        return this.width * this.height;
+    }
+}
+
+class Rectangle extends Shape {
+    constructor(width: number, height: number) {
+        super(width, height);
+    }
+}
+
+class Square extends Shape {
+    constructor(side: number) {
+        super(side, side);
+    }
+}
+
+function printArea(shape: Shape): void {
+    console.log(`Area: ${shape.getArea()}`);
+}
+
+```
+
 ## Interface Segregation Principle (ISP)
 
 ![Interface Segregation Principle](/assets/img/principles/solid/I.png)
+
+> Notes: "A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use."
+
+Không nên buộc một Client triển khai một Interface mà nó không sử dụng hoặc bắt nó phụ thuộc vào một Method mà nó không dùng đến.
+
+Như vậy nguyên tắc Interface Segregation Principle (ISP) khuyến khích chia nhỏ các interface thành các phần nhỏ để không buộc các lớp phải triển khai các phương thức không liên quan đến nhiệm vụ của chúng.
+
+Việc này làm giảm sự phụ thuộc vào các Method không cần thiết và làm cho mã nguồn linh hoạt, dễ mở rộng và bảo trì hơn.
+
+### Diagram
+
+![Diagram](/assets/img/principles/solid/ID.png)
+
+### Source code
+
+```ts
+interface Order {
+    processOrder(): void;
+    calculateTotal(): number;
+    sendConfirmationEmail(): void;
+}
+
+class OrderHandler implements Order {
+    processOrder(): void {
+        console.log("Processing order...");
+    }
+
+    calculateTotal(): number {
+        console.log("Calculating total...");
+        return 100;
+    }
+
+    sendConfirmationEmail(): void {
+        console.log("Sending confirmation email...");
+    }
+}
+```
+
+Trong ví dụ này, mục đích class `Order` chỉ được dùng để xử lý các order đang có, nhưng nó lại phải đi implement cả `calculateTotal()` và `sendConfirmationEmail()`. Như vậy chúng ta nên tách riêng ra các method này ở các interface khác nhau, để giảm độ phụ thuộc vào method mà nó không cần dùng đến.
+
+```ts
+interface OrderProcessor {
+    processOrder(): void;
+}
+
+interface TotalCalculator {
+    calculateTotal(): number;
+}
+
+interface EmailSender {
+    sendConfirmationEmail(): void;
+}
+
+class OrderHandler implements OrderProcessor, TotalCalculator, EmailSender {
+    processOrder(): void {
+        console.log("Processing order...");
+    }
+
+    calculateTotal(): number {
+        console.log("Calculating total...");
+        return 100;
+    }
+
+    sendConfirmationEmail(): void {
+        console.log("Sending confirmation email...");
+    }
+}
+
+const orderHandler: OrderProcessor = new OrderHandler();
+orderHandler.processOrder();
+```
+
+Trong ví dụ này, chúng ta đã chia nhỏ `Order interface` thành các interface con `(OrderProcessor, TotalCalculator, và EmailSender)`. Mỗi interface con đại diện cho một phần cụ thể của nhiệm vụ đặt hàng.
+
+`OrderHandler` là một lớp thực hiện tất cả các interface con. Điều này cho phép chọn lựa các tính năng cần thiết và tránh triển khai các phương thức không liên quan.
 
 ## Dependency Inversion Principle (DIP)
 
 ![Dependency Inversion Principle](/assets/img/principles/solid/D.png)
 
-## Kết luận
+> Notes: "Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions."
+
+Trong principles này chúng ta có thể hiểu:
+- Các module cấp cao không nên phụ thuộc vào các module cấp thấp mà cả hai nên phụ thuộc vào abtraction.
+- Abstraction không nên phụ thuộc vào Detail, mà Detail nên phụ thuộc vào abstraction.
+
+### Diagram
+
+![Diagram](/assets/img/principles/solid/DD.png)
+
+### Source code
+
+```ts
+// Presentation
+class HtmlFormatter implements OutputFormatter {
+  format(data: any): string {
+    return "<html>" + JSON.stringify(data) + "</html>";
+  }
+}
+
+// Presentation
+class JsonFormatter implements OutputFormatter {
+  format(data: any): string {
+    return JSON.stringify(data);
+  }
+}
+
+//  Interface Usecase
+interface OutputFormatter {
+  format(data: any): string;
+}
+
+// Business Login
+class BookExporter {
+  private formatter: OutputFormatter;
+
+  constructor(formatter: OutputFormatter) {
+    this.formatter = formatter;
+  }
+
+  export(book: any): void {
+    const data = this.getBookData(book);
+    const formattedData = this.formatter.format(data);
+    console.log(formattedData);
+  }
+
+  private getBookData(book: any): any {
+    return { title: book.title, author: book.author };
+  }
+}
+
+const htmlFormatter = new HtmlFormatter();
+const jsonFormatter = new JsonFormatter();
+
+const bookExporterHTML = new BookExporter(htmlFormatter);
+bookExporterHTML.export({ title: "The Book", author: "John Doe" });
+
+const bookExporterJSON = new BookExporter(jsonFormatter);
+bookExporterJSON.export({ title: "The Book", author: "John Doe" });
+```
 
 # [References]
 
