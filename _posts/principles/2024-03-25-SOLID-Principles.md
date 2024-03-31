@@ -7,8 +7,6 @@ tags: [principles]
 render_with_liquid: false
 ---
 
-# S.O.L.I.D Principles
-
 Nếu các bạn đã quen thuộc với Lập trình hướng đối tượng (OOP), thì có thể bạn đã từng nghe về các nguyên tắc SOLID.
 
 Hiện nay ở trên mang có rất nhiều vài viết hay về SOLID nhưng mình hiếm khi thấy bất kỳ ví dụ nào có hình ảnh. Điều này khiến việc học hỏi đối với những người học tập bằng hình ảnh như mình cảm thấy hơi khó khăn.
