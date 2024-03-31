@@ -1,5 +1,5 @@
 ---
-title: "[NestJs] Giới thiệu về các khái niệm cơ bản trong NestJS"
+title: "[NestJS] Giới thiệu về các khái niệm cơ bản trong NestJS"
 author: thuohuynh
 date: 2024-03-15 23:35:00 +0900
 categories: [NestJS]
