@@ -21,7 +21,9 @@ ACID bao gồm bộ 4 thuộc tính, viết tắt tương ứng với các chữ
 
 Atomicity (Tính nguyên tử) là chuỗi hoạt động của database không thể phân chia và không thể rút gọn, sao cho tất cả các bước đều xảy ra hoặc là không gì xảy ra.
 
-> Notes: Atomicity is an indivisible and irreducible series of database operations such that either all occurs, or nothing occurs.
+> Notes: 
+Atomicity is an indivisible and irreducible series of database operations such that either all occurs, or nothing occurs.
+{: .prompt-info }
 
 Nếu có một trấnction bị lôi thì transaction đó sẽ được ROLLBACK lại như ban đầu, dữ liệu sẽ không thay đổi, còn nếu không xảy ra lỗi thì transaction sẽ được COMMIT, dữ liệu trong cơ sở dữ liệu sẽ được cập nhật thành công.
 
@@ -47,7 +49,9 @@ Có nhiều cách để đảm bảo nguyên tắc Atomic trong cơ sở dữ li
 
 Consistency (Tính nhất quán) có nghĩa là giá trị phải luôn được bảo toàn, yêu cầu rằng tất cả transaction chỉ có thể thay đổi dữ liệu theo những cách được cho phép. Trong DBMS, tính toàn vẹn của dữ liệu phải được duy trì, điều này có nghĩa là nếu có một thay đổi trong cơ sở dữ liệu, thì nó phải luôn được bảo toàn. Trong trường hợp của giao dịch, tính toàn vẹn của dữ liệu rất quan trọng để cơ sở dữ liệu luôn đồng nhất trước và sau giao dịch. Dữ liệu phải luôn chính xác.
 
-> Notes: Consistency (or correctness) refers to the requirement that any given database transaction must change affected data only in allowed ways. Any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof.
+> Notes: 
+Consistency (or correctness) refers to the requirement that any given database transaction must change affected data only in allowed ways. Any data written to the database must be valid according to all defined rules, including constraints, cascades, triggers, and any combination thereof.
+{: .prompt-info }
 
 ![Consistency](/assets/img/principles/acid/acid-properties-in-dbms4.png)
 
@@ -64,7 +68,9 @@ Trong hình trên, có ba tài khoản: A, B và C. A thực hiện giao dịch 
 
 Isolation (Tính cô lập) đảm bảo các transaction được thực thi một cách độc lập, không phụ thuộc lẫn nhau.
 
-> Notes: Isolation: Events within a transaction must be hidden from other transactions running concurrentl
+> Notes: 
+Isolation: Events within a transaction must be hidden from other transactions running concurrentl
+{: .prompt-info }
 
 ![Isolation](/assets/img/principles/acid/acid-properties-in-dbms5.png)
 
@@ -74,7 +80,9 @@ Mình có ví dụ này để làm rõ tính Isolation, nếu hai hoạt động
 
 Durability (Tính bền vững) đảm bảo rằng những transaction đã commit, kết quả của nó sẽ được lưu trữ vĩnh viễn và không thể thay đổi hoặc mất mát, ngay cả trong trường hợp có lỗi hệ thống, cúp điện hoặc các sự cố khác.
 
-> Notes: Durability: Once a transaction has been completed and has committed its results to the database, the system must guarantee that these results survive any subsequent malfunctions.
+> Notes: 
+Durability: Once a transaction has been completed and has committed its results to the database, the system must guarantee that these results survive any subsequent malfunctions.
+{: .prompt-info }
 
 Giả sử bạn đang thực hiện một giao dịch trực tuyến để chuyển 1000 đô la từ tài khoản ngân hàng của bạn sang tài khoản của một người thân. Đây coi như một transanction được thực hiện qua Internet và bao gồm nhiều bước như sau:
 
