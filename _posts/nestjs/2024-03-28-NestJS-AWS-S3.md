@@ -197,8 +197,6 @@ export class FileUploadController {
 
 Đến đây mình sẽ thử dùng Postman để tải 1 file hình ảnh lên trên AWS S3 mà mình đã setup.
 
-![T.B.D]()
-
 Ở phần `body`, mình sẽ chọn `form-data`. Sau đó nhập `key=file`, và lựa chọn file sau đó kéo vào chỗ `value`
 
 ```
